@@ -1,0 +1,26 @@
+.Card{
+    border: 1px solid black;
+    float: left;
+    text-align: center;
+    background-color: #c7d3c7;
+}
+
+.onClose{
+    display: flex;
+    justify-content: center;
+
+    background-color: red;
+    border: 0px;
+    width: 30px;
+    height: 20px;
+}
+
+.Nombre{
+    text-decoration: none;
+    color: #2E8B57;
+}
+
+.Nombre:hover {
+    transform: scale(1.2, 1.2);
+    color: #225137;
+}
