@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
+import Favorites from './components/Favorites/Favorites';
 
 const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
 const API_KEY = 'f224255fdef6.b77f78524bfd07051181';
@@ -68,6 +69,7 @@ function App() {
             <Route path='/home' element={ <Cards characters={characters} onClose={onClose}/> }/>
             <Route path='/about' element={<About/>} />
             <Route path='/detail/:id' element={<Detail/>} />
+            <Route path='/favorites' element={<Favorites/>}/>
          </Routes>
         
       </div>

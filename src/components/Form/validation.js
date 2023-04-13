@@ -1,53 +1,23 @@
-const validation = (userData, errors, setErrors) => {
+const validation = (userData) => {
+    const errors = {};
 
-    // EMAIL
-    if (!/\S+@\S+\.\S+/.test(userData.email)){ 
-        setErrors({
-            ...errors,
-            email: 'Ingresa un usuario valido'
-        }) 
+    if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(userData.email)){
+        errors.email = 'el email ingresado no es válido rey/reina';
+    }
+    if(!userData.email){ // userData.email.length === ''
+        errors.email = 'debe ingresar un email';
+    }
+    if(userData.email.length > 35){
+        errors.email = 'el email no debe superar los 35 caracteres'
+    }
+    if(!/.*\d+.*/.test(userData.password)){
+        errors.password = 'la contraseña debe contener al menos un número'
+    }
+    if(userData.password.length < 6 || userData.password.length > 10){
+        errors.password = 'la contraseña debe tener un tamaño entre 6 y 10 caracteres'
     }
 
-    else if (!userData.email){
-        setErrors({
-            ...errors,
-            email: 'El nombre de usuario no puede estar vacio'
-        })
-
-    }
-
-    else if (userData.email.length > 35){
-        setErrors({
-            ...errors,
-            email: 'No puede tener mas de 35 caracteres'
-        })
-    }
-
-    else {setErrors({
-        ...errors,
-        email: ''
-    });
-}
-
-    // PASSWORD
-    if (!/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,10}$/.test(userData.password)) {
-        setErrors({
-            ...errors,
-            password: 'Longitud de 6 a 10 caracters'
-        })
-    }
-
-    else if(!/\d/.test(userData.password)){
-        setErrors({
-            ...errors,
-            password: 'Debe contener un numero'
-        })
-    }
-
-    else {setErrors({
-        ...errors,
-        email: ''
-    })}
+    return errors;
 }
 
 export default validation;

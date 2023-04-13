@@ -1,61 +1,47 @@
 import style from './Form.module.css'
 
-import validation from "./validation";
 import { useState } from "react";
+import validation from "./validation";
 
 const Form = ({ Login }) => {
-
+    const [errors, setErrors] = useState({});
     const [userData, setUserData] = useState({
         email: '',
         password: ''
-    })
-
-    const [errors, setErrors] = useState({
-        email: '',
-        password: ''
-    })
+    });
 
     const handleChange = (event) => {
         setUserData({
             ...userData,
             [event.target.name]: event.target.value
         })
-        validation({
+
+        setErrors(validation({
             ...userData,
-            [event.target.name]: event.target.value},
-            errors,
-            setErrors
-        );
+            [event.target.name]: event.target.value
+        }))
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        Login(userData)
+        Login(userData);
     }
 
-    return (  
-            <div className={style.Formulario}>
-                <form onSubmit={handleSubmit}>
-                <div >
-                <label htmlFor="email">Email: </label>
-                <input className={style.Input} onChange={handleChange} value={userData.email} name="email" type="email" />
-                <p>{errors.email}</p>
-                </div>
+    return(
+        <div className={style.Formulario}>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="email" style={{ color: "white"}}>Email: </label>
+                <input className={style.Input} type="email" name='email' value={userData.email} onChange={handleChange}/>
+                {errors.email && <p style={{ color: "red"}}>{errors.email}</p>}
+                <hr />
+                <label htmlFor="password" style={{ color: "white"}}>Password: </label>
+                <input className={style.Input} type="text" name="password" value={userData.password} onChange={handleChange}/>
+                {errors.password && <p style={{ color: "red"}}>{errors.password}</p>}
 
-                <div>
-                <label htmlFor="password">Password: </label>
-                <input className={style.Input} onChange={handleChange} value={userData.password} name="password" type="text" />
-                <p>{errors.password }</p>
-                </div>
-
-                <button className={style.Boton}>Submit</button>
+                <button className={style.Boton} >Submit</button>
             </form>
-            </div>
-    )
+        </div>
+        )
 }
 
 export default Form;
-
-
-
-
