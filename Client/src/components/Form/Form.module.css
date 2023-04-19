@@ -1,0 +1,198 @@
+.Formulario
+{
+    position: relative; 
+    width: 380px;
+    height: 470px;
+    background-color: #000000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.Formulario::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#45f3ff, #45f3ff, #45f3ff) ;
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.Formulario::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#45f3ff, #45f3ff, #45f3ff) ;
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.BorderLine 
+{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+.BorderLine::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#90EE90, #90EE90, #90EE90) ;
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.BorderLine::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#90EE90, #90EE90, #90EE90) ;
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.Formulario form 
+{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;    
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.Formulario form h2 
+{
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.Formulario form .InputBox
+{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+ 
+.Formulario form .InputBox input
+{
+    position: relative;
+    width: 100%;
+    padding: 30px 10px 10px;
+    background: transparent;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #ffffff;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.Formulario form .InputBox span 
+{
+    position: absolute;
+    left: 0;
+    padding: -80px 10px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+}
+
+
+
+.Formulario form .InputBox i
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background :#fff ;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.Boton {
+    width: 50%;
+    border-radius: 4px;
+    margin-top: 20px;
+    background-color: #00ff00; 
+    color: black; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    animation-duration: 3s; 
+    animation-name: cambia-color; 
+    animation-iteration-count: infinite; 
+    transition: 1s;
+}
+  
+  .Boton:hover {
+    filter: grayscale(100%);
+  }
+  
+  @keyframes cambia-color {
+    0% { background-color: #00ff00; } 
+    25% { background-color: #98FB98; } 
+    50% { background-color: #3CB371; } 
+    75% { background-color: #90EE90; }
+    100% { background-color: #ADFF2F; } 
+  }
+  
+  @keyframes cambia-color-hover {
+    0% { background-color: #00ff00; } 
+    25% { background-color: #ff0000; } 
+    50% { background-color: #00ffff; } 
+    75% { background-color: #ff00ff; }
+    100% { background-color: #00ff00; } 
+  }
