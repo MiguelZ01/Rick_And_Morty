@@ -3,7 +3,7 @@ import style from '../Cards/Cards.module.css'
 
 export default function Cards({ characters, onClose }) {
    return (
-      <div className={style.Cards}>
+      <div className={style.Container}>
          {
             characters.map(({ id, name, status, species, gender, origin, image }) => {
                return(

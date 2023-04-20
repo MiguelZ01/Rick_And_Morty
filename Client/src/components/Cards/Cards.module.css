@@ -1,4 +1,11 @@
-.Cards{
-    width: 90%;
-    margin: 0px auto;
+.Container
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
 }
+
