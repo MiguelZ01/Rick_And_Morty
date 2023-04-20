@@ -1,19 +1,26 @@
 const http = require("http")
-const character = require('./utils/data')
+const getCharById = require("./controllers/getChardById")
 
-http.createServer((req, res) => {
+http
+.createServer((req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
-    
-    if (req.url.includes(`/rickandmorty/character`)) { 
+
+    if(req.url.includes('/rickandmorty/character')){
         const id = req.url.split('/').at(-1)
-        let filterID = character?.filter(char => char.id === Number(id))
-
-        res.writeHead(200, { 'Content-type': 'application/json' })
-        return res.end(JSON.stringify(character[id-1]))
+            return getCharById(res,id)
     }
-
     
+    // if (req.url.includes("rickandmorty/character/")) {
+    //     const id = req.url.split('/').at(-1);
+    //     const character = data.find((char) => char.id === +id);
 
-    
+    //     if (character) {
+    //         res.writeHead(200, { "Content-Type": "application/json" }).end(JSON.stringify(character));
+    //         } 
+            
+    //     else {
+    //         res.writeHead(404, { "Content-Type": "application/json" }).end(JSON.stringify({ error: "Character not found" }));
+    //     }
+    // }
 })
-.listen(3002, 'localhost')
+.listen(3001)

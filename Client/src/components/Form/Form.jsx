@@ -28,7 +28,8 @@ const Form = ({ Login }) => {
     }
 
     return(
-        <div className={style.Formulario}>
+        <div className={style.Principal}>
+            <div className={style.Formulario}>
             <span className={style.BorderLine}></span>
             <form onSubmit={handleSubmit}>
                 <h2>Inicio de seccion</h2>
@@ -53,6 +54,7 @@ const Form = ({ Login }) => {
                     <button className={style.Boton} >Submit</button>
                 </div>
             </form>
+        </div>
         </div>
         )
 }

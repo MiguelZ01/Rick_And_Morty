@@ -9,9 +9,6 @@ import Favorites from './components/Favorites/Favorites';
 import { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 
-const URL_BASE = 'http://localhost:3002/rickandmorty/character';
-// const API_KEY = 'f224255fdef6.b77f78524bfd07051181';
-
 function App() {
 
    // Hooks
@@ -40,7 +37,7 @@ function App() {
    }, [access, navigate]);
 
    const onSearch = (id) => {
-      axios(`${URL_BASE}/${id}`)
+      axios(`http://localhost:3001/rickandmorty/character/${id}`)
       .then(response => response.data)
       .then((data) => {
          if (data.name) {

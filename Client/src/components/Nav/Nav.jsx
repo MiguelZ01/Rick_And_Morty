@@ -7,23 +7,34 @@ const Nav = ({ onSearch }) => {
 
     return (
         <nav className={style.Busqueda} >
-            <SearchBar onSearch={onSearch}/>
+            <SearchBar onSearch={onSearch} className={style.SearchBar}/>
 
             <div className={style.Botones}>
-            <button className={style.Boton}>
-                <Link to='/about' >ABOUT</Link>
-            </button>
 
-            <button className={style.Boton}>
-                <Link to='/home' >HOME</Link>
-            </button>
+            <Link to='/about' className={style.Boton}>
+                <i></i><i></i>
+                <button>
+                    About
+                </button>
+            </Link>
 
-            <button className={style.Boton}>
-                <Link to='/favorites' >FAVORITES</Link>
-            </button>
+            <Link to='/home' className={style.Boton}>
+                <i></i><i></i>
+                <button>
+                    Home
+                </button>
+            </Link>
+            
+            <Link to='/favorites' className={style.Boton}>
+                <i></i><i></i>
+                <button>
+                    Favorites
+                </button>
+            </Link>
             </div>
         </nav>
     )
 }
+
 
 export default Nav;
