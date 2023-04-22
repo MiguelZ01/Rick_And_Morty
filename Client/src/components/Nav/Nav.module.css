@@ -30,12 +30,12 @@
 .Boton i,
 .Boton i:nth-child(2)
 {
-    background: linear-gradient(45deg, #00ccff, #0e1538, #0e1538, #90EE90)
+    background: linear-gradient(45deg, #00ccff, #0e1538, #0e1538, #dffa3e)
 }
 
 .Boton i:nth-child(2)
 {
-    filter: blur(10px);
+    filter: blur(5px);
 }
 
 a button 

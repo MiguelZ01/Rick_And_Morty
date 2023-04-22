@@ -7,12 +7,19 @@
   font-family: 'Poppins';
 }
 
-body {
-    background-image: url(components/Nav/IMG/pexels-espacio.jpg);
+body 
+{
+    background-image: url(./components/Nav/IMG/Rick\ Fondo.jpg);
+    
     background-size: 100%;
     background-attachment:fixed;
     background-repeat: no-repeat;
-  }
+}
+
+#root
+{
+  image-rendering: url(./components/Nav/IMG/ram.png);
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
