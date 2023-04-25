@@ -1,200 +1,244 @@
-.Principal 
-{
-    margin-top: 8%;
-    display: flex;
-    justify-content: center;
-    min-height: 470px;
+.Principal {
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  min-height: 470px;
 }
 
-.Formulario
-{    
-    position: relative; 
-    width: 380px;
-    height: 470px;
-    background-color: #000000;
-    border-radius: 8px;
-    overflow: hidden;
+.Formulario {
+  position: relative;
+  width: 380px;
+  height: 470px;
+  background-color: #000000;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.Formulario::before
-{
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
-    background: linear-gradient(0deg,transparent,
-    transparent,#45f3ff, #45f3ff, #45f3ff) ;
-    z-index: 1;
-    transform-origin: bottom right;
-    animation: animate 6s linear infinite;
+.Formulario::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
 }
 
-.Formulario::after
-{
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
-    background: linear-gradient(0deg,transparent,
-    transparent,#45f3ff, #45f3ff, #45f3ff) ;
-    z-index: 1;
-    transform-origin: bottom right;
-    animation: animate 6s linear infinite;
-    animation-delay: -3s;
+.Formulario::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
 }
 
-.BorderLine 
-{
-    position: absolute;
-    top: 0;
-    inset: 0;
+.BorderLine {
+  position: absolute;
+  top: 0;
+  inset: 0;
 }
 
-.BorderLine::before
-{
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
-    background: linear-gradient(0deg,transparent,
-    transparent,#90EE90, #90EE90, #90EE90) ;
-    z-index: 1;
-    transform-origin: bottom right;
-    animation: animate 6s linear infinite;
-    animation-delay: -1.5s;
+.BorderLine::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #90ee90, #90ee90, #90ee90);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -1.5s;
 }
 
-.BorderLine::after
-{
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
-    background: linear-gradient(0deg,transparent,
-    transparent,#90EE90, #90EE90, #90EE90) ;
-    z-index: 1;
-    transform-origin: bottom right;
-    animation: animate 6s linear infinite;
-    animation-delay: -4.5s;
+.BorderLine::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #90ee90, #90ee90, #90ee90);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -4.5s;
 }
 
-@keyframes animate
-{
-    0%
-    {
-        transform: rotate(0deg);
-    }
-    100%
-    {
-        transform: rotate(360deg);
-    }
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.Formulario form 
-{
-    position: absolute;
-    inset: 4px;
-    background: #222;
-    padding: 50px 40px;
-    border-radius: 8px;    
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
+.Formulario form {
+  position: absolute;
+  inset: 4px;
+  background: #222;
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
 }
 
-.Formulario form h2 
-{
-    color: #ffffff;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0.1em;
+.Formulario form h2 {
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
 }
 
-.Formulario form .InputBox
-{
-    position: relative;
-    width: 300px;
-    margin-top: 35px;
-}
- 
-.Formulario form .InputBox input
-{
-    position: relative;
-    width: 100%;
-    padding: 30px 10px 10px;
-    background: transparent;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    box-shadow: none;
-    color: #ffffff;
-    font-size: 1em;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-    z-index: 10;
+.Formulario form .InputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 40px;
 }
 
-.Formulario form .InputBox span 
-{
-    position: absolute;
-    left: 0;
-    padding: -80px 10px 10px;
-    pointer-events: none;
-    color: #8f8f8f;
-    font-size: 1em;
-    letter-spacing: 0.05em;
+.Formulario form .InputBox input {
+  position: relative;
+  width: 100%;
+  padding: 30px 10px 10px;
+  background: transparent;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: #ffffff;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
 }
 
+.Input:-webkit-autofill,
+.Input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
 
+.Formulario form .InputBox span {
+  position: absolute;
+  left: 0;
+  padding: -80px 10px 10px;
+  pointer-events: none;
+  color: #8f8f8f;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
 
-.Formulario form .InputBox i
-{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 97%;
-    height: 2px;
-    background :#fff ;
-    border-radius: 4px;
-    overflow: hidden;
-    transition: 0.5s;
-    pointer-events: none;
+.Formulario form .InputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 97%;
+  height: 2px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
 }
 
 .Boton {
-    width: 50%;
-    border-radius: 4px;
-    margin-top: 20px;
-    background-color: #00ff00; 
-    color: black; 
-    border: none; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    animation-duration: 3s; 
-    animation-name: cambia-color; 
-    animation-iteration-count: infinite; 
-    transition: 1s;
-    cursor: pointer;
+  position: relative;
+  outline: none;
+  padding: 1em 1.8em;
+  border: 1px solid #303030;
+  border-radius: 4px;
+  background: #212121;
+  color: #fff3ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer;
 }
-  
-  .Boton:hover {
-    filter: grayscale(100%);
+
+.Boton:hover {
+  box-shadow: 0 0 10px #98fb98, 0 0 25px #006400, 0 0 50px #98fb98;
+  transition-delay: 0.6s;
+}
+
+.Button span {
+  position: absolute;
+}
+
+.Button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+}
+
+.Boton::before {
+  margin-right: 5px;
+  color: #999;
+}
+
+.Boton.text {
+  color: #525252;
+  font-size: 16px;
+}
+
+.Boton:hover {
+  transition: all 0.5s ease-in-out;
+  animation: bounce 1.6s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
   }
-  
-  @keyframes cambia-color {
-    0% { background-color: #00ff00; } 
-    25% { background-color: #98FB98; } 
-    50% { background-color: #3CB371; } 
-    75% { background-color: #90EE90; }
-    100% { background-color: #ADFF2F; } 
+
+  40% {
+    transform: translateY(-5px);
   }
-  
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (hover: hover) {
+  .whatsapp-btn:hover .joinchat__tooltip {
+    opacity: 1;
+    animation: none;
+    transition: opacity 0.2s;
+  }
+}
+
+.Boton:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 0.7s;
+  transition-delay: 0.52s;
+}
+
+.Boton:active {
+  background: #98fb98;
+  background: linear-gradient(to top light, #98fb98, #006400);
+  color: #bfbfbf;
+  box-shadow: 0 0 10px #98fb98, 0 0 25px #006400, 0 0 50px #98fb98;
+  transition: 0.1s;
+}
+
+.Boton:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
+  transition: none;
+  transition-delay: 1s;
+}

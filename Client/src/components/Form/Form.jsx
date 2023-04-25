@@ -39,6 +39,7 @@ const Form = ({ Login }) => {
                         type="email" name='email' 
                         value={userData.email} 
                         onChange={handleChange}
+                        // autoComplete='off'
                     />
                     <span htmlFor="email">Email: </span>
                     <i></i>
@@ -51,7 +52,12 @@ const Form = ({ Login }) => {
                     {errors.password && <p style={{ color: "white"}}>{errors.password}</p>}
                 </div>
                 <div className={style.InputBox}>
-                    <button className={style.Boton} >Submit</button>
+                    <button className={style.Boton} >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Submit
+                    </button>
                 </div>
             </form>
         </div>

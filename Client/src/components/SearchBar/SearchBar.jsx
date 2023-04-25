@@ -9,6 +9,13 @@ export default function SearchBar({onSearch}) {
    const handleChange = (event) => {
          setId(event.target.value)
    }
+   
+   const randomizer = () => {
+      const randomId = (Math.floor(Math.random() * 826) + 1).toString();
+      setId(randomId);
+      onSearch(randomId);
+      setId("");
+    };
 
    return (
       <div className={style.SearchBar} >
@@ -16,10 +23,15 @@ export default function SearchBar({onSearch}) {
          <div className={style.Boton}>
             <i></i><i></i>
             <button onClick={() => {onSearch(id); setId('')}}>
-            Agregar
+            Include
             </button>
          </div>
-
+         <div className={style.Boton}>
+         <i></i><i></i>
+         <button className="btn-random" onClick={() => {randomizer(); }}>
+          Randomizer
+         </button>
+         </div>
       </div>
    );
 }

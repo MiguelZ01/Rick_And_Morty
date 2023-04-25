@@ -1,25 +1,22 @@
-const express = requir('express')
-let myFavorites = []
+let myFavorites = [];
 
 const postFav = (req, res) => {
-    const { personaje } = req.body
+  const character = req.body;
 
-    const favorite = {
-        personaje
-    }
+  myFavorites.push(character);
 
-    myFavorites.push(favorite)
-    res.json(myFavorites)
-}
+  return res.status(200).json(myFavorites);
+};
 
 const deleteFav = (req, res) => {
-    const { id } = req.params
-    myFavorites.filter((favorite == id))
-}
+  const { id } = req.params;
 
-res.json(myFavorites)
+  myFavorites = myFavorites.filter((favorite) => favorite.id !== +id);
+
+  return res.status(200).json(myFavorites);
+};
 
 module.exports = {
-    postFav,
-    deleteFav
-}
+  postFav,
+  deleteFav,
+};
