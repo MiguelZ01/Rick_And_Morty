@@ -22,23 +22,17 @@ function App() {
 
   // Eventos
   const login = async (userData) => {
-    const { email, password } = userData;
     const URL = "http://localhost:3001/rickandmorty/login/";
 
     try {
+      const { email, password } = userData;
       const { data } = await axios(URL + `?email=${email}&password=${password}`);
       const { access } = data;
       setAccess(data);
       access && navigate("/home");
     } catch {
-      window.alert("Datos incorrectos.");
+      alert("Datos incorrectos.");
     }
-
-    // .then(({ data }) => {
-    //   const { access } = data;
-    //   setAccess(data);
-    //   access && navigate("/home");
-    // });
   };
 
   useEffect(() => {

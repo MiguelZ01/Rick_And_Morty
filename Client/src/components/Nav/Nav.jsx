@@ -7,6 +7,7 @@ const Nav = ({ onSearch }) => {
 
     return (
         <nav className={style.Busqueda} >
+
             <SearchBar onSearch={onSearch} className={style.SearchBar}/>
 
             <div className={style.Botones}>

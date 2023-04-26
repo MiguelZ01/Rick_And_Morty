@@ -4,8 +4,43 @@
   text-align: center;
   margin: 50px auto;
   width: 93%;
-  min-height: 530px;
-  border: 1px solid white;
-  border-radius: 8px;
-  background: rgb(22, 22, 76);
+  min-height: 600px;
+  box-shadow: 10px 9px 0px 0px #696868;
+  background: #434649;
+}
+
+.Presentation {
+  display: block;
+  position: absolute;
+  text-align: start;
+  width: 40%;
+
+  right: 60px;
+  top: 300px;
+}
+
+.Presentation h2 {
+  font-size: 40px;
+  float: left;
+  width: auto;
+  margin-right: 12px;
+}
+
+.Nombre {
+  color: #008b8b;
+}
+
+.Clearboth {
+  float: none;
+  clear: both;
+}
+
+.Presentation h3 {
+  font-size: 25px;
+}
+
+.Hello,
+h3,
+h4 {
+  color: white;
 }

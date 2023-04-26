@@ -37,19 +37,29 @@ function Card({ id, name, species, gender, origin, image, onClose, addFav, remov
          <div className={style.Content} >
 
          <Link to={`/detail/${id}`} className={style.Nombre}>
-               <h2 >{name}</h2>
+               <h2 >{name} </h2>
+               <h2>{id}</h2>
          </Link>
 
          <div className={style.Botones} >
          {
             isFav ? (
-               <button onClick={handleFavorite} className={style.Favoritos}>❤️</button>
+               <div className={style.Boton}>
+                  <i></i><i></i>
+                  <button onClick={handleFavorite} className={style.Favoritos}>❤️</button>
+               </div>
             ) : (
-               <button onClick={handleFavorite} className={style.Favoritos}>🤍</button>
+               <div className={style.Boton}>
+                  <i></i><i></i>
+                  <button onClick={handleFavorite} className={style.Favoritos}>🤍</button>
+               </div>
             )
          }
 
-         <button className={style.onClose} onClick={() => {onClose(id)}}>X</button>
+         <div className={style.Boton}>
+            <i></i><i></i>
+            <button className={style.onClose} onClick={() => {onClose(id)}}>X</button>
+         </div>
          </div>
 
          </div>
