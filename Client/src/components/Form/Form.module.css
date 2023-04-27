@@ -155,7 +155,7 @@
 .Boton {
   position: relative;
   outline: none;
-  padding: 1em 1.8em;
+  padding: 10px 1.5em;
   border: 1px solid #303030;
   border-radius: 4px;
   background: #212121;
