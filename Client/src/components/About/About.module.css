@@ -1,25 +1,3 @@
-.About {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 50px auto;
-  width: 93%;
-  min-height: 600px;
-  border-radius: 20px;
-  background: url(./IMG/Background3.jpg);
-  background-repeat: no-repeat;
-}
-
-.Presentation {
-  display: block;
-  position: absolute;
-  text-align: start;
-  width: 40%;
-
-  right: 160px;
-  top: 250px;
-}
-
 .Presentation h2 {
   font-size: 40px;
   float: left;
@@ -29,6 +7,10 @@
 
 .Nombre {
   color: #00ff00;
+  position: absolute;
+
+  top: 140px;
+  left: 138px;
 }
 
 .Clearboth {
@@ -44,4 +26,82 @@
 h3,
 h4 {
   color: white;
+}
+
+.Principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  flex-wrap: wrap;
+}
+
+.Box {
+  position: relative;
+  width: 93%;
+  height: 580px;
+  display: flex;
+  justify-content: center;
+  background: url(https://i.ibb.co/ScLgZm3/Fondo2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 40px;
+}
+
+.Box:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+
+.Box:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+  filter: blur(40px);
+}
+
+.Box:before,
+.Box:after {
+  background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.Box .Glass {
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.Box .Content {
+  padding-top: 120px;
+  color: #fff;
+}
+
+.Icons {
+  margin-top: 50px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Icons a {
+  color: #ffffff;
+  font-size: 35px;
+  cursor: pointer;
 }
