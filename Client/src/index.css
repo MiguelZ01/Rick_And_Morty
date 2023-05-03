@@ -8,8 +8,8 @@
 }
 
 body {
-  background-image: url(https://i.ibb.co/khCpgrx/Rick-Fondo.jpg);
-  /* background: #1b1a1a; */
+  /* background-image: url(https://i.ibb.co/khCpgrx/Rick-Fondo.jpg); */
+  background: #1b1a1a;
 
   background-size: 100%;
   background-attachment: fixed;
