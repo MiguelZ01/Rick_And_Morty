@@ -1,17 +1,18 @@
-const { Favorite } = require("../models/Favorite");
+const { Favorite } = require("../DB_connection");
 
-const deleteFav = (req, res) => {
-  const { id } = req.params;
+const deleteFav = async (req, res) => {
   try {
-    deleteFav.findByIdAndRemove(id, (err) => {
-      if (err) {
-        res.status(400).send({ message: "Error al eliminar favorito" });
-      } else {
-        res.status(200).json({ Favorite });
-      }
+    const { id } = req.params;
+
+    await Favorite.destroy({
+      where: { id },
     });
+
+    allFav = await Favorite.findAll();
+
+    res.status(200).json(allFav);
   } catch (error) {
-    res.status(500).send({ message: err });
+    res.status(500).json({ message: error.message });
   }
 };
 
