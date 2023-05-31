@@ -8,7 +8,7 @@ import Form from "./components/Form/Form";
 import Favorites from "./components/Favorites/Favorites";
 import { useEffect, useState } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
-axios.defaults.baseURL = "http://localhost:3001/";
+axios.defaults.baseURL = "https://rick-and-morty-yx73.vercel.app";
 
 function App() {
    // Hooks
