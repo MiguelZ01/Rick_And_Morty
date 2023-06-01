@@ -8,7 +8,7 @@ import Form from "./components/Form/Form";
 import Favorites from "./components/Favorites/Favorites";
 import { useEffect, useState } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
-axios.defaults.baseURL = "https://rick-and-morty-back.vercel.app";
+axios.defaults.baseURL = "http://localhost:3001/";
 
 function App() {
    // Hooks
@@ -23,11 +23,11 @@ function App() {
 
    // Eventos
    const login = async (userData) => {
-      const URL = "rickandmorty/login/";
+      const URL = "rickandmorty/login";
 
       try {
          const { email, password } = userData;
-         const { data } = await axios(URL + `?email=${email}&password=${password}`);
+         const { data } = await axios(URL + `?email=${EMAIL}&password=${PASSWORD}`);
          const { access } = data;
          setAccess(data);
          access && navigate("/home");
